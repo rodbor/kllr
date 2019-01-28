@@ -115,6 +115,14 @@ a:hover,a:active{outline:0}
 .updated:not(.published){display:none}
 .page-content,.entry-content,.entry-summary{margin:1.5em 0 0}
 .page-links{clear:both;margin:0 0 1.5em}
+body{overflow:hidden !important}
+.portfolio{display:block;overflow:scroll;max-width:100%;width:100%;-ms-overflow-style:none;overflow:-moz-scrollbars-none}
+.portfolio::-webkit-scrollbar{display:none}
+.portfolio ul{font-size:0;list-style:none;white-space:nowrap}
+.portfolio li{display:inline-block;white-space:normal;margin-left:50px}
+.portfolio-cover{position:relative;cursor:none}
+.img_title{display:table;position:absolute;font-size:40px}
+.image_container{cursor:none;display:table}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}

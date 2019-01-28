@@ -44,7 +44,8 @@ if ( ! function_exists( 'kllr_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'kllr' ),
+			'menu-1'      => esc_html__( 'Primary', 'kllr' ),
+			'footer-menu' => esc_html__( 'Footer Menu', 'kllr' ),
 		) );
 
 		/*
@@ -120,9 +121,13 @@ add_action( 'widgets_init', 'kllr_widgets_init' );
  * Enqueue scripts and styles.
  */
 function kllr_scripts() {
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/css/bootstrap.min.css', false, '4.1.3', 'all' );
 	wp_enqueue_style( 'kllr-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js', array( 'jquery' ), '4.1.3', true );
 	wp_enqueue_script( 'kllr-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'mousewheel', get_template_directory_uri() . '/assets/vendor/jquery.mousewheel.min.js', array(), '3.1.13', true );
+	wp_enqueue_script( 'kllr', get_template_directory_uri() . '/js/kllr.js', array( 'jquery' ), '1.0.0', true );
 
 	wp_enqueue_script( 'kllr-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -151,6 +156,11 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Load custom post type
+ */
+require get_template_directory() . '/inc/cpt.php';
 
 /**
  * Load Jetpack compatibility file.

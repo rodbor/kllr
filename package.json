@@ -1,11 +1,11 @@
 {
-  "name": "KLLR",
-  "description": "KLLR WordPress theme.",
+  "name": "your-project",
+  "description": "A WPGulp based project.",
   "version": "1.0.0",
-  "author": "Rodrigo Borges (https://twitter.com/rodkllr/)",
+  "author": "Author Name (https://twitter.com/MrAhmadAwais/)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rodbor/kllr"
+    "url": "https://github.com/ahmadawais/WPGulp"
   },
   "license": "MIT",
   "devDependencies": {
