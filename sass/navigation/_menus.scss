@@ -105,3 +105,45 @@
 		width: 50%;
 	}
 }
+
+
+
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	margin: 40px 50px;
+	position: absolute;
+	//width: 100%;
+	left: 0;
+	right: 0;
+
+	.logo-header {
+
+	}
+
+	p {
+		font-size: 14px;
+		width: 240px;
+		margin-top: 15px;
+	}
+}
+
+.main-menu {
+	font-size: 15px;
+	text-align: right;
+	position: fixed;
+	right: 50px;
+
+	a {
+		color: $color__text-main;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	li {
+		margin-bottom: 4px;
+	}
+}

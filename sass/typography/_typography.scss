@@ -5,7 +5,7 @@ select,
 optgroup,
 textarea {
 	color: $color__text-main;
-	font-family: $font__main;
+	font-family: 'Graphik', sans-serif;
 	@include font-size(1);
 	line-height: $font__line-height-body;
 }
@@ -13,3 +13,51 @@ textarea {
 @import "headings";
 
 @import "copy";
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('assets/fonts/Graphik-Semibold.woff2') format('woff2'),
+        url('assets/fonts/Graphik-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('assets/fonts/Graphik-Medium.woff2') format('woff2'),
+        url('assets/fonts/Graphik-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('assets/fonts/Graphik-RegularItalic.woff2') format('woff2'),
+        url('assets/fonts/Graphik-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('assets/fonts/Graphik-Regular.woff2') format('woff2'),
+        url('assets/fonts/Graphik-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Druk Wide';
+    src: url('assets/fonts/Druk-WideMedium.woff2') format('woff2'),
+        url('assets/fonts/Druk-WideMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Druk Wide';
+    src: url('assets/fonts/DrukWide-Bold.woff2') format('woff2'),
+        url('assets/fonts/DrukWide-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}

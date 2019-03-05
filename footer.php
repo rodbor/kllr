@@ -13,13 +13,14 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<?php
-			wp_nav_menu( array(
-				'theme_location' => 'footer-menu',
-				'menu_id'        => 'footer-menu',
-			) );
-		?>
+	<footer id="colophon" class="footer-main">
+		<a href="mailto:hi@kllr.design">hi@kllr.design</a>
+		
+		<ul>
+			<li>fb</li>
+			<li>tw</li>
+			<li>ig</li>
+		</ul>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
