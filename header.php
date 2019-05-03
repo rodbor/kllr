@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The header for our theme
@@ -24,32 +25,37 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kllr' ); ?></a>
 
-	<nav>
-		<div class="logo-header">
-			<svg width="74" height="19" viewBox="0 0 74 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<g clip-path="url(#clip0)">
-				<path d="M25.4572 0H22.0576V18.3204H33.2597V15.348H25.4572V0Z" fill="#101010"/>
-				<path d="M44.6681 0H41.2686V18.3215H52.4712V15.3491H44.6681V0Z" fill="#101010"/>
-				<path d="M10.4067 0L3.40182 12.3063V0.000558413H0V18.3204H3.4007L6.8198 12.3985L10.1542 18.321L13.9746 18.3215L13.974 18.321H13.9746L8.68821 9.16077L13.9746 0.000558413L10.4067 0Z" fill="#101010"/>
-				<path d="M73.9995 18.3209L69.6401 10.7667C71.8697 9.94363 73.4432 7.93279 73.4432 5.58242C73.4432 2.67868 70.9349 -0.00170898 67.3932 -0.00170898H60.4775V18.3215H63.8777V11.195L66.2745 11.1922L70.3285 18.3209H73.9995ZM63.8777 2.67756H66.9434C68.6819 2.67756 70.0916 3.9781 70.0916 5.58131C70.0916 7.08121 68.6808 8.47947 67.1513 8.47947L67.1418 8.48617H63.8777V2.67756Z" fill="#101010"/>
-				</g>
-				<defs>
-				<clipPath id="clip0">
-				<rect width="74" height="18.3215" fill="white"/>
-				</clipPath>
-				</defs>
-			</svg>
-			<p>A multidisciplinary design agency based in Portugal</p>
-		</div><!-- .logo-header -->
+	<nav class="site-nav">
 
-		<div class="main-menu">
+		<svg width="21" height="27" viewBox="0 0 21 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<g clip-path="url(#clip0)">
+		<path d="M6.99227 26.1087C5.4 25.1909 4.00483 23.9674 2.88693 22.5086C1.76904 21.0498 0.950467 19.3844 0.478266 17.6083V17.6083C-0.479788 14.023 0.0256376 10.204 1.88335 6.99139C3.74107 3.77878 6.79891 1.43573 10.3842 0.477673V0.477673C12.1591 0.00082592 14.0107 -0.120556 15.8326 0.120505C17.6546 0.361566 19.411 0.960315 21.0008 1.88234L6.99227 26.1087Z" fill="#101010"/>
+		</g>
+		<defs>
+		<clipPath id="clip0">
+		<rect width="21" height="26.1085" fill="white"/>
+		</clipPath>
+		</defs>
+		</svg>
+		
+
+		<!--<div class="main-menu">
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 				) );
 				?>
-		</div>
+		</div>-->
+
+		<div class="logo-header">
+			<svg width="61" height="15" viewBox="0 0 61 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M20.984 0H18.1816V14.9991H27.4158V12.5655H20.984V0Z" fill="#101010"/>
+			<path d="M36.8199 0H34.0176V15H43.2522V12.5664H36.8199V0Z" fill="#101010"/>
+			<path d="M8.57848 0L2.8042 10.0753V0.000457178H0V14.9991H2.80328L5.62173 10.1507L8.37033 14.9995L11.5196 15L11.5191 14.9995H11.5196L7.1619 7.5L11.5196 0.000457178L8.57848 0Z" fill="#101010"/>
+			<path d="M61 14.999L57.4064 8.81427C59.2443 8.14039 60.5414 6.49409 60.5414 4.56983C60.5414 2.1925 58.4738 -0.00195312 55.5543 -0.00195312H49.8535V14.9994H52.6563V9.16493L54.6321 9.16264L57.9739 14.999H61ZM52.6563 2.19159H55.1835C56.6166 2.19159 57.7786 3.25636 57.7786 4.56891C57.7786 5.79689 56.6157 6.94167 55.3548 6.94167L55.347 6.94715H52.6563V2.19159Z" fill="#101010"/>
+			</svg>
+		</div><!-- .logo-header -->
 	</nav>
 
 	<div id="content" class="site-content">

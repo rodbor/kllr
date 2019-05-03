@@ -109,7 +109,7 @@
 
 
 
-nav {
+nav.site-nav {
 	display: flex;
 	justify-content: space-between;
 	margin: 40px 50px;
@@ -119,31 +119,11 @@ nav {
 	right: 0;
 
 	.logo-header {
-
-	}
-
-	p {
-		font-size: 14px;
-		width: 240px;
-		margin-top: 15px;
+		float: right;
 	}
 }
 
-.main-menu {
-	font-size: 15px;
-	text-align: right;
-	position: fixed;
-	right: 50px;
-
-	a {
-		color: $color__text-main;
-	}
-
-	ul {
-		list-style: none;
-	}
-
-	li {
-		margin-bottom: 4px;
-	}
+.logo-header {
+	margin-right: 100px;
+	
 }

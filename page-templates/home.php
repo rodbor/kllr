@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Template Name: Home
@@ -12,52 +13,65 @@ get_header();
 		<main id="main" class="site-main">
 
 			<section class="intro">
-				<div class="logo-intro">
-				<svg width="739px" height="198px" viewBox="0 0 739 198" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-   
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="KLLR-W" fill="#101010">
-            <polygon id="Path" points="255.258 0.485352 218.699 0.485352 218.699 197.503 339.166 197.503 339.166 165.537 255.258 165.537"></polygon>
-            <polygon id="Path" points="442.563 0.485352 406.004 0.485352 406.004 197.515 526.477 197.515 526.477 165.549 442.563 165.549"></polygon>
-            <polygon id="Path" points="112.694 0.486084 37.3643 132.828 37.3643 0.492089 0.7812 0.492089 0.7812 197.503 37.3523 197.503 74.121 133.819 109.979 197.51 151.064 197.516 151.058 197.51 151.064 197.51 94.214 99.0008 151.064 0.492089"></polygon>
-            <path d="M738.712,197.509 L691.831,116.271 C715.808,107.419 732.73,85.7947 732.73,60.5189 C732.73,29.2921 705.755,0.467285 667.668,0.467285 L593.297,0.467285 L593.297,197.515 L629.862,197.515 L629.862,120.877 L655.637,120.847 L699.234,197.509 L738.712,197.509 Z M629.862,29.2801 L662.83,29.2801 C681.527,29.2801 696.686,43.2661 696.686,60.5069 C696.686,76.6368 681.515,91.6737 665.066,91.6737 L664.964,91.7458 L629.862,91.7458 L629.862,29.2801 Z" id="Shape" fill-rule="nonzero"></path>
-        </g>
-    </g>
-</svg>
-					<!--<img src="<?php echo get_template_directory_uri() . '/assets/images/logo-large.png' ?>" />-->
-				</div>
+				<svg width="311" height="77" viewBox="0 0 311 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M106.989 0L92.7012 0V76.9953H139.78V64.503H106.989V0Z" fill="#101010"/>
+				<path d="M187.725 0L173.438 0V77H220.519V64.5077H187.725V0Z" fill="#101010"/>
+				<path d="M43.7362 0L14.2968 51.7198V0.00234685H0L0 76.9953H14.2921L28.6616 52.107L42.675 76.9977L58.7311 77L58.7287 76.9977H58.7311L36.514 38.5L58.7311 0.00234685L43.7362 0Z" fill="#101010"/>
+				<path d="M311.001 76.9979L292.679 45.2497C302.05 41.7905 308.663 33.3395 308.663 23.4616C308.663 11.258 298.121 -0.00683594 283.236 -0.00683594H254.172V77.0002H268.462V47.0498L278.535 47.038L295.572 76.9979H311.001ZM268.462 11.2533H281.346C288.652 11.2533 294.577 16.7191 294.577 23.4569C294.577 29.7606 288.648 35.6371 282.22 35.6371L282.18 35.6652H268.462V11.2533Z" fill="#101010"/>
+				</svg>
 			</section>
 
-			<section class="about-home">
-				<div class="desc">
-					<p class="h-text">KLLR* is a design agency based in Portugal with experience across UX design, app design, brand identity, web development and WordPress. We have worked with a diverse range of well-known and established clients.</p>
-					<p class="v-text">* Pronounced as killer</p>
-				</div>
-			</section>
-
-			<section class="services scroll-left">
-				<p>user experience <span></span> user interface design <span></span> branding</p>
-			</section>
 
 			<div class="portfolio">
-
-				<h2>Selected Work</h2>
+					
+				<?php
+				$args = array(
+					'post_type'     => 'portfolio',
+					'category_name' => 'eyeso',
+					'posts_per_page' => 1,
+					'order' => 'ASC',
+				);
+				$query = new WP_Query( $args ); 
 				
-					<ul>
-						<?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'orderby' => 'post_id', 'order' => 'DES', 'posts_per_page' => 50 ) ); ?>
+				while ( $query->have_posts() ) : $query->the_post();
+				?>
 
-						<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
+					<a href="<?php the_permalink(); ?>" class="portfolio-item-right">
+						<img src="<?php the_post_thumbnail_url(); ?>" title="<?php the_title(); ?>">
+
+						<h3><?php the_title(); ?></h3>
+						<p>UX, UI Design</p>
+					</a>
+				<?php
+				endwhile;						
+				wp_reset_query();
+				?>
+							
+
+				<?php
+				$args = array(
+					'post_type'     => 'portfolio',
+					'category_name' => 'comobranco',
+					'posts_per_page' => 1,
+					'order' => 'ASC',
+				);
+				$query = new WP_Query( $args ); 
+				
+				while ( $query->have_posts() ) : $query->the_post();
+				?>
+
+					<a href="<?php the_permalink(); ?>" class="portfolio-item">
+						<img src="<?php the_post_thumbnail_url(); ?>" title="<?php the_title(); ?>">
+
+						<h3><?php the_title(); ?></h3>
+						<p>UX, UI Design</p>
+					</a>
+				<?php
+				endwhile;						
+				wp_reset_query();
+				?>
 						
-							<li>
-								<a href="<?php the_permalink(); ?>">
-									<img src="<?php the_post_thumbnail_url(); ?>" title="<?php the_title(); ?>">
-								</a>
-							</li>
-
-						<?php endwhile; ?>
-					</ul>
-				
-
+					
 				<?php
 				while ( have_posts() ) :
 					the_post();
@@ -66,6 +80,11 @@ get_header();
 				?>
 
 			</div><!-- .portfolio -->
+
+
+			<div class="home-about">
+				<p>KLLR* is a design agency based in Portugal with experience across UI/UX design, brand identity, web development and WordPress.</p>
+			</div><!-- -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
